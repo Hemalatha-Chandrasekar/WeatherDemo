@@ -2,15 +2,15 @@ import java.io.File;
 
 public class Main {
     public static void main(String[] args) throws WeatherFileNotFoundException {
-        String defaultFilePath = "weather.txt";
+        String defaultFilePath = "/Users/hema/IdeaProjects/WeatherDemo/weather.txt";
 
         weatherReader weatherReader = new weatherReader();
         // Step 1: Get file path from user
         String filePath = weatherReader.getFileNameFromUser();
 
         // Step 2: Check if the file exists
-        File file = new File(filePath);
-        weatherReader.checkFileExists(file);
+        //File file = new File(filePath);
+       // weatherReader.checkFileExists(file);
 
         // Step 3: Process the weather file (read it)
         weatherReader.processWeatherFile(filePath);
